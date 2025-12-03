@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Jujutsu Shenanigans</title>
+    
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+</head>
+<body>
+
+    <!-- Efeitos de Fundo -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-icon">🤞</div>
+            <div class="logo-text">
+                <h1>JUJUTSU <span class="gradient-text">SHENANIGANS</span></h1>
+                <p>TOURNAMENT SYSTEM</p>
+            </div>
+        </div>
+        
+        <div class="status-container">
+            <div id="status-badge" class="status-badge">
+                <span class="status-dot"></span>
+                <span id="status-text">A conectar...</span>
+            </div>
+            <div class="player-count">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span id="player-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Lobby -->
+        <section id="lobby-view" class="view hidden fade-in">
+            <div class="hero-section">
+                <h2 class="glitch-text" data-text="BATTLE ARENA">BATTLE ARENA</h2>
+                <p class="hero-subtitle">O ritual vai começar. Aguardando feiticeiros...</p>
+            </div>
+            
+            <div id="participants-grid" class="cards-grid">
+                <!-- Cards injetados via JS -->
+            </div>
+        </section>
+
+        <!-- Bracket -->
+        <section id="bracket-view" class="view hidden fade-in">
+            <div id="bracket-container" class="bracket-wrapper">
+                <!-- Colunas injetadas via JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>JUJUTSU TOURNAMENT SYSTEM</p>
+            <span class="version">v2.0 • WEB SOCKET READY</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
